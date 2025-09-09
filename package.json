@@ -1,0 +1,19 @@
+{
+  "name": "college-projects",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "tsx src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "clean": "rm -rf dist"
+  },
+  "keywords": [],
+  "author": "Keira Hopkins <open-source@keirahopkins.co.uk> (https://keirahopkins.co.uk)",
+  "license": "Apache-2.0",
+  "packageManager": "pnpm@10.15.1",
+  "devDependencies": {
+    "@types/node": "^24.3.1",
+    "typescript": "^5.9.2"
+  }
+}
