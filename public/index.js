@@ -132,9 +132,9 @@ function preloadImages() {
   });
 }
 
-// Initialize on page load
+// Initialise on page load
 document.addEventListener("DOMContentLoaded", () => {
-  // Add any initialization code here
+  // Add any initialisation code here
   preloadImages();
 });
 
