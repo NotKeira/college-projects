@@ -1,11 +1,229 @@
 <!DOCTYPE html>
 <html lang="en-GB">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>James Marriott - Official Website</title>
-    </head>
-<body>
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>James Marriott - Official Website</title>
+    <meta name="description"
+        content="Official website of James Marriott - British singer, songwriter and content creator. Listen to music, buy merch, and stay updated with the latest news.">
+    <meta name="keywords" content="James Marriott, music, singer, songwriter, British, merch, concert, tour">
+    <meta name="author" content="James Marriott">
+    <meta name="theme-color" content="#ff6b35">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="James Marriott - Official Website">
+    <meta property="og:description"
+        content="British singer, songwriter and content creator bringing you authentic music and entertainment.">
+    <meta property="og:url" content="https://jamesmarriott.co.uk">
+
+    <!-- Performance optimizations -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="#home">James Marriott</a>
+            </div>
+
+            <nav class="nav">
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#music" class="nav-link">Music</a></li>
+                    <li><a href="#merch" class="nav-link">Merch</a></li>
+                    <li><a href="#news" class="nav-link">News</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+
+                <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>James Marriott</h1>
+            <p>British singer, songwriter, and content creator bringing you authentic music and entertainment.</p>
+            <a href="#music" class="btn">Listen Now</a>
+            <a href="#merch" class="btn btn-secondary">Shop Merch</a>
+        </div>
+    </section>
+
+    <!-- Music Section -->
+    <section id="music" class="section">
+        <h2 class="section-title">Music</h2>
+        <div class="music-grid">
+            <div class="album-card">
+                <div class="album-cover">
+                    <i class="fas fa-music"></i>
+                </div>
+                <h3 class="album-title">Latest Single</h3>
+                <p class="album-year">2025</p>
+                <a href="#" class="btn">Listen</a>
+            </div>
+
+            <div class="album-card">
+                <div class="album-cover">
+                    <i class="fas fa-compact-disc"></i>
+                </div>
+                <h3 class="album-title">EP Collection</h3>
+                <p class="album-year">2024</p>
+                <a href="#" class="btn">Listen</a>
+            </div>
+
+            <div class="album-card">
+                <div class="album-cover">
+                    <i class="fas fa-headphones"></i>
+                </div>
+                <h3 class="album-title">Acoustic Sessions</h3>
+                <p class="album-year">2024</p>
+                <a href="#" class="btn">Listen</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Merch Section -->
+    <section id="merch" class="section">
+        <h2 class="section-title">Merchandise</h2>
+        <div class="merch-grid">
+            <div class="merch-item">
+                <div class="merch-image">
+                    <i class="fas fa-tshirt"></i>
+                </div>
+                <h3 class="merch-title">Classic T-Shirt</h3>
+                <p class="merch-price">£25.00</p>
+                <a href="#" class="btn">Buy Now</a>
+            </div>
+
+            <div class="merch-item">
+                <div class="merch-image">
+                    <i class="fas fa-hat-cowboy"></i>
+                </div>
+                <h3 class="merch-title">Logo Cap</h3>
+                <p class="merch-price">£20.00</p>
+                <a href="#" class="btn">Buy Now</a>
+            </div>
+
+            <div class="merch-item">
+                <div class="merch-image">
+                    <i class="fas fa-coffee"></i>
+                </div>
+                <h3 class="merch-title">Coffee Mug</h3>
+                <p class="merch-price">£15.00</p>
+                <a href="#" class="btn">Buy Now</a>
+            </div>
+
+            <div class="merch-item">
+                <div class="merch-image">
+                    <i class="fas fa-bag-shopping"></i>
+                </div>
+                <h3 class="merch-title">Tote Bag</h3>
+                <p class="merch-price">£18.00</p>
+                <a href="#" class="btn">Buy Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <!-- News Section -->
+    <section id="news" class="section">
+        <h2 class="section-title">Latest News</h2>
+        <div class="news-grid">
+            <article class="news-item">
+                <p class="news-date">12 September 2025</p>
+                <h3 class="news-title">New Single "Midnight Thoughts" Released</h3>
+                <p>Excited to share my latest single with you all! "Midnight Thoughts" is now available on all streaming
+                    platforms. This track explores themes of introspection and personal growth.</p>
+                <a href="#" class="btn">Read More</a>
+            </article>
+
+            <article class="news-item">
+                <p class="news-date">8 September 2025</p>
+                <h3 class="news-title">Upcoming Tour Dates Announced</h3>
+                <p>I'm thrilled to announce my autumn tour across the UK! Tickets go on sale this Friday. Can't wait to
+                    perform these new songs live for you all.</p>
+                <a href="#" class="btn">Read More</a>
+            </article>
+
+            <article class="news-item">
+                <p class="news-date">1 September 2025</p>
+                <h3 class="news-title">Behind the Scenes: Studio Sessions</h3>
+                <p>Take a look behind the scenes of my recent recording sessions. Working on some exciting new material
+                    that I can't wait to share with you soon.</p>
+                <a href="#" class="btn">Read More</a>
+            </article>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <h2 class="section-title">Get In Touch</h2>
+        <form class="contact-form">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" required>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="#" class="social-link">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="#" class="social-link">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="social-link">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="social-link">
+                    <i class="fab fa-spotify"></i>
+                </a>
+                <a href="#" class="social-link">
+                    <i class="fab fa-apple"></i>
+                </a>
+            </div>
+            <p class="footer-text">&copy; 2025 James Marriott. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="index.js"></script>
 </body>
+
 </html>
