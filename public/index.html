@@ -21,7 +21,7 @@
     <!-- Performance optimisations -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -31,195 +31,408 @@
 </head>
 
 <body>
+    <!-- Skip to main content link for screen readers -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <!-- Header -->
-    <header class="header">
+    <header class="header" role="banner">
         <div class="nav-container">
             <div class="logo">
-                <a href="#home">James Marriott</a>
+                <a href="#home" aria-label="James Marriott homepage">James Marriott</a>
             </div>
 
-            <nav class="nav">
-                <ul class="nav-menu" id="nav-menu">
-                    <li><a href="#home" class="nav-link">Home</a></li>
-                    <li><a href="#music" class="nav-link">Music</a></li>
-                    <li><a href="#merch" class="nav-link">Merch</a></li>
-                    <li><a href="#news" class="nav-link">News</a></li>
-                    <li><a href="#contact" class="nav-link">Contact</a></li>
+            <nav class="nav" role="navigation" aria-label="Main navigation">
+                <ul class="nav-menu" id="nav-menu" role="menubar">
+                    <li role="none"><a href="#home" class="nav-link" role="menuitem" aria-current="page">Home</a></li>
+                    <li role="none"><a href="#music" class="nav-link" role="menuitem">Music</a></li>
+                    <li role="none"><a href="#merch" class="nav-link" role="menuitem">Merch</a></li>
+                    <li role="none"><a href="#news" class="nav-link" role="menuitem">News</a></li>
+                    <li role="none"><a href="#contact" class="nav-link" role="menuitem">Contact</a></li>
                 </ul>
 
-                <button class="mobile-menu-toggle" id="mobile-menu-toggle">
-                    <i class="fas fa-bars"></i>
+                <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-expanded="false"
+                    aria-controls="nav-menu" aria-label="Toggle mobile navigation menu">
+                    <i class="fas fa-bars" aria-hidden="true"></i>
                 </button>
             </nav>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>James Marriott</h1>
-            <p>British singer, songwriter, and content creator bringing you authentic music and entertainment.</p>
-            <a href="#music" class="btn">Listen Now</a>
-            <a href="#merch" class="btn btn-secondary">Shop Merch</a>
-        </div>
-    </section>
-
-    <!-- Music Section -->
-    <section id="music" class="section">
-        <h2 class="section-title">Music</h2>
-        <div class="music-grid">
-            <div class="album-card">
-                <div class="album-cover">
-                    <i class="fas fa-music"></i>
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section id="home" class="hero" aria-labelledby="hero-heading">
+            <div class="hero-content">
+                <h1 id="hero-heading">James Marriott</h1>
+                <p>British singer, songwriter, and content creator bringing you authentic music and entertainment.</p>
+                <div class="hero-buttons">
+                    <a href="#music" class="btn btn-primary" aria-describedby="music-section">Listen Now</a>
+                    <a href="#merch" class="btn btn-secondary" aria-describedby="merch-section">Shop Merch</a>
                 </div>
-                <h3 class="album-title">Latest Single</h3>
-                <p class="album-year">2025</p>
-                <a href="#" class="btn">Listen</a>
             </div>
+            <div class="hero-gradient" aria-hidden="true"></div>
+        </section>
 
-            <div class="album-card">
-                <div class="album-cover">
-                    <i class="fas fa-compact-disc"></i>
+        <!-- Music Section -->
+        <section id="music" class="section" aria-labelledby="music-heading">
+            <div class="container">
+                <h2 id="music-heading" class="section-title">Music</h2>
+                <div class="music-grid" role="list" aria-label="James Marriott's music releases">
+                    <article class="album-card" role="listitem">
+                        <div class="album-cover" aria-hidden="true">
+                            <i class="fas fa-compact-disc" aria-hidden="true"></i>
+                            <div class="album-overlay">
+                                <a href="https://open.spotify.com/album/2da40GDH3ygPRRoJc8n7WG" class="play-btn"
+                                    target="_blank" rel="noopener noreferrer"
+                                    aria-label="Listen to Don't Tell the Dog on Spotify">
+                                    <i class="fas fa-play" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="album-info">
+                            <h3 class="album-title">Don't Tell the Dog</h3>
+                            <p class="album-year">2025 • Album</p>
+                            <a href="https://open.spotify.com/album/2da40GDH3ygPRRoJc8n7WG" class="btn btn-small"
+                                target="_blank" rel="noopener noreferrer"
+                                aria-label="Listen to Don't Tell the Dog album on Spotify">Listen</a>
+                        </div>
+                    </article>
+
+                    <article class="album-card" role="listitem">
+                        <div class="album-cover" aria-hidden="true">
+                            <i class="fas fa-music" aria-hidden="true"></i>
+                            <div class="album-overlay">
+                                <a href="https://open.spotify.com/album/0l5WNUlgSOkFx78kSIYsTc" class="play-btn"
+                                    target="_blank" rel="noopener noreferrer"
+                                    aria-label="Listen to Are We There Yet? on Spotify">
+                                    <i class="fas fa-play" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="album-info">
+                            <h3 class="album-title">Are We There Yet?</h3>
+                            <p class="album-year">2023 • Debut Album</p>
+                            <a href="https://open.spotify.com/album/0l5WNUlgSOkFx78kSIYsTc" class="btn btn-small"
+                                target="_blank" rel="noopener noreferrer"
+                                aria-label="Listen to Are We There Yet? album on Spotify">Listen</a>
+                        </div>
+                    </article>
+
+                    <article class="album-card" role="listitem">
+                        <div class="album-cover" aria-hidden="true">
+                            <i class="fas fa-headphones" aria-hidden="true"></i>
+                            <div class="album-overlay">
+                                <a href="https://open.spotify.com/album/3L3Xf00oHuF7mauZMbpqW3" class="play-btn"
+                                    target="_blank" rel="noopener noreferrer"
+                                    aria-label="Listen to Bitter Tongues on Spotify">
+                                    <i class="fas fa-play" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="album-info">
+                            <h3 class="album-title">Bitter Tongues</h3>
+                            <p class="album-year">2022 • EP</p>
+                            <a href="https://open.spotify.com/album/3L3Xf00oHuF7mauZMbpqW3" class="btn btn-small"
+                                target="_blank" rel="noopener noreferrer"
+                                aria-label="Listen to Bitter Tongues EP on Spotify">Listen</a>
+                        </div>
+                    </article>
                 </div>
-                <h3 class="album-title">EP Collection</h3>
-                <p class="album-year">2024</p>
-                <a href="#" class="btn">Listen</a>
             </div>
+        </section>
 
-            <div class="album-card">
-                <div class="album-cover">
-                    <i class="fas fa-headphones"></i>
+        <!-- Merch Section -->
+        <section id="merch" class="section" aria-labelledby="merch-heading">
+            <div class="container">
+                <h2 id="merch-heading" class="section-title">Merchandise</h2>
+                <div class="merch-grid" role="list" aria-label="James Marriott merchandise">
+                    <article class="merch-item" role="listitem">
+                        <div class="merch-image" aria-hidden="true">
+                            <i class="fas fa-tshirt" aria-hidden="true"></i>
+                            <div class="merch-overlay">
+                                <a href="https://jamesmarriottmusic.com/products/dont-tell-the-dog-white-album-t-shirt"
+                                    class="shop-btn" target="_blank" rel="noopener noreferrer"
+                                    aria-label="Buy Don't Tell The Dog White Album T-Shirt">
+                                    <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="merch-info">
+                            <h3 class="merch-title">Don't Tell The Dog | White Album T-Shirt</h3>
+                            <p class="merch-price" aria-label="Price: thirty pounds">£30.00</p>
+                            <a href="https://jamesmarriottmusic.com/products/dont-tell-the-dog-white-album-t-shirt"
+                                class="btn btn-small" target="_blank" rel="noopener noreferrer"
+                                aria-label="Buy Don't Tell The Dog White Album T-Shirt for £30">Buy Now</a>
+                        </div>
+                    </article>
+
+                    <article class="merch-item" role="listitem">
+                        <div class="merch-image" aria-hidden="true">
+                            <i class="fas fa-tshirt" aria-hidden="true"></i>
+                            <div class="merch-overlay">
+                                <a href="https://jamesmarriottmusic.com/products/dont-tell-the-dog-illustrated-black-t-shirt"
+                                    class="shop-btn" target="_blank" rel="noopener noreferrer"
+                                    aria-label="Buy Don't Tell The Dog Illustrated Black T-Shirt">
+                                    <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="merch-info">
+                            <h3 class="merch-title">Don't Tell The Dog Illustrated | Black T-Shirt</h3>
+                            <p class="merch-price" aria-label="Price: thirty pounds">£30.00</p>
+                            <a href="https://jamesmarriottmusic.com/products/dont-tell-the-dog-illustrated-black-t-shirt"
+                                class="btn btn-small" target="_blank" rel="noopener noreferrer"
+                                aria-label="Buy Don't Tell The Dog Illustrated Black T-Shirt for £30">Buy Now</a>
+                        </div>
+                    </article>
+
+                    <article class="merch-item" role="listitem">
+                        <div class="merch-image" aria-hidden="true">
+                            <i class="fas fa-shirt" aria-hidden="true"></i>
+                            <div class="merch-overlay">
+                                <a href="https://jamesmarriottmusic.com/products/dont-tell-the-dog-scrap-book-white-sweat"
+                                    class="shop-btn" target="_blank" rel="noopener noreferrer"
+                                    aria-label="Buy Don't Tell The Dog Scrap Book White Sweatshirt">
+                                    <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="merch-info">
+                            <h3 class="merch-title">Don't Tell The Dog Scrap Book | White Sweat</h3>
+                            <p class="merch-price" aria-label="Price: fifty-five pounds">£55.00</p>
+                            <a href="https://jamesmarriottmusic.com/products/dont-tell-the-dog-scrap-book-white-sweat"
+                                class="btn btn-small" target="_blank" rel="noopener noreferrer"
+                                aria-label="Buy Don't Tell The Dog Scrap Book White Sweatshirt for £55">Buy Now</a>
+                        </div>
+                    </article>
+
+                    <article class="merch-item" role="listitem">
+                        <div class="merch-image" aria-hidden="true">
+                            <i class="fas fa-tshirt" aria-hidden="true"></i>
+                            <div class="merch-overlay">
+                                <a href="https://jamesmarriottmusic.com/products/gary-grapes-black-t-shirt"
+                                    class="shop-btn" target="_blank" rel="noopener noreferrer"
+                                    aria-label="Pre-order Grapes Vintage Black T-Shirt">
+                                    <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="merch-info">
+                            <h3 class="merch-title">Grapes Vintage Black T-Shirt</h3>
+                            <p class="merch-price" aria-label="Price: thirty pounds">£30.00</p>
+                            <a href="https://jamesmarriottmusic.com/products/gary-grapes-black-t-shirt"
+                                class="btn btn-small" target="_blank" rel="noopener noreferrer"
+                                aria-label="Pre-order Grapes Vintage Black T-Shirt for £30">Pre-Order</a>
+                        </div>
+                    </article>
                 </div>
-                <h3 class="album-title">Acoustic Sessions</h3>
-                <p class="album-year">2024</p>
-                <a href="#" class="btn">Listen</a>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Merch Section -->
-    <section id="merch" class="section">
-        <h2 class="section-title">Merchandise</h2>
-        <div class="merch-grid">
-            <div class="merch-item">
-                <div class="merch-image">
-                    <i class="fas fa-tshirt"></i>
+        <!-- News Section -->
+        <section id="news" class="section" aria-labelledby="news-heading">
+            <div class="container">
+                <h2 id="news-heading" class="section-title">Latest News</h2>
+                <div class="news-grid" role="list" aria-label="Latest news from James Marriott">
+                    <article class="news-item" role="listitem">
+                        <div class="news-content">
+                            <time class="news-date" datetime="2025-06">June 2025</time>
+                            <h3 class="news-title">"Don't Tell the Dog" Hits Number 1</h3>
+                            <p class="news-preview">Celebrating an incredible milestone! My second album has reached
+                                Number
+                                1 on the UK Albums Chart...</p>
+                            <button class="btn btn-outline" onclick="openModal('modal1')"
+                                aria-describedby="modal1-description">Read More</button>
+                            <div id="modal1-description" class="sr-only">Opens detailed article about Don't Tell the Dog
+                                reaching number 1</div>
+                        </div>
+                    </article>
+
+                    <article class="news-item" role="listitem">
+                        <div class="news-content">
+                            <time class="news-date" datetime="2025-09">September 2025</time>
+                            <h3 class="news-title">Major UK & US Tour Announced</h3>
+                            <p class="news-preview">Excited to announce my biggest tour yet! Starting with US dates in
+                                September...</p>
+                            <button class="btn btn-outline" onclick="openModal('modal2')"
+                                aria-describedby="modal2-description">View Dates</button>
+                            <div id="modal2-description" class="sr-only">Opens complete list of UK and US tour dates
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="news-item" role="listitem">
+                        <div class="news-content">
+                            <time class="news-date" datetime="2025-05">May 2025</time>
+                            <h3 class="news-title">Rodd's Coffee Brand Launch</h3>
+                            <p class="news-preview">Teaming up with my mate WillNE to launch Rodd's - our new iced
+                                coffee
+                                brand...</p>
+                            <button class="btn btn-outline" onclick="openModal('modal3')"
+                                aria-describedby="modal3-description">Learn More</button>
+                            <div id="modal3-description" class="sr-only">Opens details about Rodd's coffee brand launch
+                            </div>
+                        </div>
+                    </article>
                 </div>
-                <h3 class="merch-title">Classic T-Shirt</h3>
-                <p class="merch-price">£25.00</p>
-                <a href="#" class="btn">Buy Now</a>
             </div>
+        </section>
 
-            <div class="merch-item">
-                <div class="merch-image">
-                    <i class="fas fa-hat-cowboy"></i>
+        <!-- Contact Section -->
+        <section id="contact" class="section" aria-labelledby="contact-heading">
+            <div class="container">
+                <h2 id="contact-heading" class="section-title">Get In Touch</h2>
+                <div class="contact-wrapper">
+                    <form class="contact-form" novalidate aria-label="Contact James Marriott">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Name <span aria-label="required">*</span></label>
+                                <input type="text" id="name" name="name" required aria-required="true"
+                                    aria-describedby="name-error">
+                                <div id="name-error" class="error-message" role="alert" aria-live="polite"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email <span aria-label="required">*</span></label>
+                                <input type="email" id="email" name="email" required aria-required="true"
+                                    aria-describedby="email-error">
+                                <div id="email-error" class="error-message" role="alert" aria-live="polite"></div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject <span aria-label="required">*</span></label>
+                            <input type="text" id="subject" name="subject" required aria-required="true"
+                                aria-describedby="subject-error">
+                            <div id="subject-error" class="error-message" role="alert" aria-live="polite"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message <span aria-label="required">*</span></label>
+                            <textarea id="message" name="message" required aria-required="true"
+                                aria-describedby="message-error"></textarea>
+                            <div id="message-error" class="error-message" role="alert" aria-live="polite"></div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                        <div id="form-status" role="status" aria-live="polite" aria-atomic="true"></div>
+                    </form>
                 </div>
-                <h3 class="merch-title">Logo Cap</h3>
-                <p class="merch-price">£20.00</p>
-                <a href="#" class="btn">Buy Now</a>
             </div>
-
-            <div class="merch-item">
-                <div class="merch-image">
-                    <i class="fas fa-coffee"></i>
-                </div>
-                <h3 class="merch-title">Coffee Mug</h3>
-                <p class="merch-price">£15.00</p>
-                <a href="#" class="btn">Buy Now</a>
-            </div>
-
-            <div class="merch-item">
-                <div class="merch-image">
-                    <i class="fas fa-bag-shopping"></i>
-                </div>
-                <h3 class="merch-title">Tote Bag</h3>
-                <p class="merch-price">£18.00</p>
-                <a href="#" class="btn">Buy Now</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- News Section -->
-    <section id="news" class="section">
-        <h2 class="section-title">Latest News</h2>
-        <div class="news-grid">
-            <article class="news-item">
-                <p class="news-date">12 September 2025</p>
-                <h3 class="news-title">New Single "Midnight Thoughts" Released</h3>
-                <p>Excited to share my latest single with you all! "Midnight Thoughts" is now available on all streaming
-                    platforms. This track explores themes of introspection and personal growth.</p>
-                <a href="#" class="btn">Read More</a>
-            </article>
-
-            <article class="news-item">
-                <p class="news-date">8 September 2025</p>
-                <h3 class="news-title">Upcoming Tour Dates Announced</h3>
-                <p>I'm thrilled to announce my autumn tour across the UK! Tickets go on sale this Friday. Can't wait to
-                    perform these new songs live for you all.</p>
-                <a href="#" class="btn">Read More</a>
-            </article>
-
-            <article class="news-item">
-                <p class="news-date">1 September 2025</p>
-                <h3 class="news-title">Behind the Scenes: Studio Sessions</h3>
-                <p>Take a look behind the scenes of my recent recording sessions. Working on some exciting new material
-                    that I can't wait to share with you soon.</p>
-                <a href="#" class="btn">Read More</a>
-            </article>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-        <h2 class="section-title">Get In Touch</h2>
-        <form class="contact-form">
-            <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" required>
-            </div>
-
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-
-            <div class="form-group">
-                <label for="subject">Subject</label>
-                <input type="text" id="subject" name="subject" required>
-            </div>
-
-            <div class="form-group">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" required></textarea>
-            </div>
-
-            <button type="submit" class="btn">Send Message</button>
-        </form>
-    </section>
+        </section>
+    </main>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="social-links">
-                <a href="#" class="social-link">
-                    <i class="fab fa-youtube"></i>
-                </a>
-                <a href="#" class="social-link">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="#" class="social-link">
-                    <i class="fab fa-twitter"></i>
-                </a>
-                <a href="#" class="social-link">
-                    <i class="fab fa-spotify"></i>
-                </a>
-                <a href="#" class="social-link">
-                    <i class="fab fa-apple"></i>
-                </a>
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <nav aria-label="Social media links">
+                    <ul class="social-links" role="list">
+                        <li role="listitem">
+                            <a href="https://www.youtube.com/@jamesmarriott" class="social-link" target="_blank"
+                                rel="noopener noreferrer" aria-label="Follow James Marriott on YouTube">
+                                <i class="fab fa-youtube" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li role="listitem">
+                            <a href="https://www.instagram.com/jamesmarriottyt/" class="social-link" target="_blank"
+                                rel="noopener noreferrer" aria-label="Follow James Marriott on Instagram">
+                                <i class="fab fa-instagram" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li role="listitem">
+                            <a href="https://twitter.com/JamesMarriottYT" class="social-link" target="_blank"
+                                rel="noopener noreferrer" aria-label="Follow James Marriott on Twitter">
+                                <i class="fab fa-twitter" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li role="listitem">
+                            <a href="https://open.spotify.com/artist/14apS9tKI3K30GK92BNQUL" class="social-link"
+                                target="_blank" rel="noopener noreferrer"
+                                aria-label="Listen to James Marriott on Spotify">
+                                <i class="fab fa-spotify" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li role="listitem">
+                            <a href="https://music.apple.com/gb/artist/james-marriott/458203329" class="social-link"
+                                target="_blank" rel="noopener noreferrer"
+                                aria-label="Listen to James Marriott on Apple Music">
+                                <i class="fab fa-apple" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <p class="footer-text">&copy; 2025 James Marriott. All rights reserved.</p>
             </div>
-            <p class="footer-text">&copy; 2025 James Marriott. All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- Modals -->
+    <div id="modal1" class="modal" role="dialog" aria-labelledby="modal1-title" aria-hidden="true">
+        <div class="modal-content" role="document">
+            <button class="close" onclick="closeModal('modal1')" aria-label="Close modal">&times;</button>
+            <h2 id="modal1-title">"Don't Tell the Dog" Hits Number 1</h2>
+            <time class="modal-date" datetime="2025-06">June 2025</time>
+            <p>Celebrating an incredible milestone! My second album "Don't Tell the Dog" has reached Number 1 on the UK
+                Albums Chart. Thank you to everyone who supported this deeply personal project about my childhood and
+                growth as an artist.</p>
+            <p>This album represents a significant step forward in my musical journey, exploring themes of nostalgia,
+                family, and the bittersweet nature of growing up. Each track tells a story, and I'm overwhelmed by the
+                response from fans who've connected with these deeply personal songs.</p>
+            <p>From "I Don't Want to Live Like This" to "Toothache," every song on this album comes from a real place in
+                my heart. The fact that it's reached Number 1 means the world to me and shows that authentic
+                storytelling still resonates with people.</p>
+        </div>
+    </div>
+
+    <div id="modal2" class="modal" role="dialog" aria-labelledby="modal2-title" aria-hidden="true">
+        <div class="modal-content" role="document">
+            <button class="close" onclick="closeModal('modal2')" aria-label="Close modal">&times;</button>
+            <h2 id="modal2-title">Major UK & US Tour Announced</h2>
+            <time class="modal-date" datetime="2025-09">September 2025</time>
+            <p>I'm thrilled to announce my biggest tour yet! Starting with US dates in September, then returning home
+                for an extensive UK tour in November, including shows at prestigious venues like London's Roundhouse and
+                Brighton Dome.</p>
+
+            <h3>US Tour Dates - September 2025</h3>
+            <ul class="tour-dates" role="list" aria-label="US tour dates">
+                <li role="listitem"><time datetime="2025-09-15">15 Sep</time> - Atlanta, GA - The Masquerade</li>
+                <li role="listitem"><time datetime="2025-09-19">19 Sep</time> - Philadelphia, PA - The Foundry</li>
+                <li role="listitem"><time datetime="2025-09-20">20 Sep</time> - Cambridge, MA - Middle East</li>
+                <li role="listitem"><time datetime="2025-09-23">23 Sep</time> - Chicago, IL - Bottom Lounge</li>
+                <li role="listitem"><time datetime="2025-09-24">24 Sep</time> - Saint Paul, MN - Amsterdam Bar</li>
+                <li role="listitem"><time datetime="2025-09-27">27 Sep</time> - Denver, CO - Meow Wolf</li>
+                <li role="listitem"><time datetime="2025-09-30">30 Sep</time> - Seattle, WA - Neumos</li>
+            </ul>
+
+            <h3>UK Tour Dates - November 2025</h3>
+            <ul class="tour-dates" role="list" aria-label="UK tour dates">
+                <li role="listitem"><time datetime="2025-11-01">1 Nov</time> - Exeter - Lemon Grove</li>
+                <li role="listitem"><time datetime="2025-11-02">2 Nov</time> - Bristol - O2 Academy</li>
+                <li role="listitem"><time datetime="2025-11-04">4 Nov</time> - Glasgow - Barrowland Ballroom</li>
+                <li role="listitem"><time datetime="2025-11-07">7 Nov</time> - Manchester - Academy</li>
+                <li role="listitem"><time datetime="2025-11-16">16 Nov</time> - London - Roundhouse</li>
+                <li role="listitem"><time datetime="2025-11-19">19 Nov</time> - Brighton - Brighton Dome</li>
+            </ul>
+
+            <p>Tickets are available now through official venues. Can't wait to perform these new songs live for you
+                all!</p>
+        </div>
+    </div>
+
+    <div id="modal3" class="modal" role="dialog" aria-labelledby="modal3-title" aria-hidden="true">
+        <div class="modal-content" role="document">
+            <button class="close" onclick="closeModal('modal3')" aria-label="Close modal">&times;</button>
+            <h2 id="modal3-title">Rodd's Coffee Brand Launch</h2>
+            <time class="modal-date" datetime="2025-05">May 2025</time>
+            <p>Teaming up with my mate WillNE to launch Rodd's - our new iced coffee brand with three unique flavours.
+                It's been amazing branching into entrepreneurship whilst continuing to create music that matters to me.
+            </p>
+            <p>Rodd's isn't just another celebrity coffee brand - it's something we're genuinely passionate about. We've
+                spent months perfecting the recipes and working with ethical suppliers to create something we're proud
+                to put our names on.</p>
+            <p>The three launch flavours represent different aspects of our personalities and tastes. From the bold
+                espresso blend to the smooth vanilla variant, there's something for every coffee lover.</p>
+            <p>You can find Rodd's in select retailers across the UK, with online ordering available soon. It's been
+                incredible seeing our vision come to life!</p>
+        </div>
+    </div>
 
     <!-- JavaScript -->
     <script src="index.js"></script>
