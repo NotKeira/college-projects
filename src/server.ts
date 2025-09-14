@@ -1,4 +1,3 @@
-import { Dir } from "fs";
 import { readFile } from "fs/promises";
 import { createServer, IncomingMessage, ServerResponse } from "http";
 import { extname, join } from "path";
